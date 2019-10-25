@@ -108,6 +108,39 @@ import "./styles.css";
 
 //-----------------------------------------------------------------------
 
+// const students = ['Ana', 'John', 'Fabio'];
+// const ironhackers = [...students];
+// students.push("Sandra");
+
+// console.log(students); // <== [ 'Ana', 'John', 'Fabio', 'Sandra' ]
+// console.log(ironhackers); // <== [ 'Ana', 'John', 'Fabio' ]
+
+// const ironhackers = students.slice();
+// console.log(ironhackers); // <== [ 'Ana', 'John', 'Fabio' ]
+
+// const ironhackers = [].concat(students);
+// console.log(ironhackers); // <== [ 'Ana', 'John', 'Fabio' ]
+
+// function cloneArray(array){
+//   let arrCopy = [];
+//   for(let i=0; i < array.length; ++i) {
+//       arrCopy[i] = array[i];
+//   }
+//   return arrCopy;
+// }
+// const ironhackers = cloneArray(students);
+// console.log(ironhackers); // <== [ 'Ana', 'John', 'Fabio' ]
+
+// multidimensional array
+const students = [["Ana", "John", "Fabio"], ["Alex", "Mike", "Vero"]];
+
+// case 2: using JSON.parse(JSON.stringify())
+const ironhackers = JSON.parse(JSON.stringify(students));
+students[0].push("Sandra");
+
+console.log(students);
+console.log(ironhackers);
+
 document.getElementById("app").innerHTML = `
 <h1>Hello Vanilla!</h1>
 <div>
